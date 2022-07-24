@@ -1,0 +1,120 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+    <ItemGroup>
+		<PackageReference Include="Unity" Version="5.11.10"/>
+		<PackageReference Include="AutoMapper" Version="11.0.1"/>
+		<PackageReference Include="CommandDotNet" Version="6.1.0-alpha.repl"/>
+		<PackageReference Include="CommandDotNet.DataAnnotations" Version="2.0.3"/>
+		<PackageReference Include="CommandDotNet.NameCasing" Version="3.0.1"/>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.6"/>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.6"/>
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1"/>
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0"/>
+		<PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="6.0.1"/>
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0"/>
+		<PackageReference Include="Serilog" Version="2.11.0"/>
+		<PackageReference Include="Serilog.Sinks.Console" Version="4.0.1"/>
+		<PackageReference Include="Serilog.Sinks.File" Version="5.0.0"/>
+	</ItemGroup>
+	<ItemGroup>
+		<None Update="appsettings.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+	<!-- Debug refs -->
+	<!-- <ItemGroup>
+		<Reference Include="EFCore.Helper">
+			<HintPath>..\..\efcore-helper\EFCore.Helper\bin\Debug\net6.0\EFCore.Helper.dll</HintPath>
+		</Reference>
+		<Reference Include="DIHelper">
+			<HintPath>..\..\di-helper\DIHelper\bin\Debug\net6.0\DIHelper.dll</HintPath>
+		</Reference>
+		<Reference Include="CLIHelper">
+			<HintPath>..\..\cli-helper\CLIHelper\bin\Debug\net6.0\CLIHelper.dll</HintPath>
+		</Reference>
+		<Reference Include="Config.Wrapper">
+			<HintPath>..\..\config-wrapper\Config.Wrapper\bin\Debug\net6.0\Config.Wrapper.dll</HintPath>
+		</Reference>
+		<Reference Include="ModelHelper">
+			<HintPath>..\..\model-helper\ModelHelper\bin\Debug\net6.0\ModelHelper.dll</HintPath>
+		</Reference>
+		<Reference Include="DataToTable">
+			<HintPath>..\..\datatotable\DataToTable\bin\Debug\net6.0\DataToTable.dll</HintPath>
+		</Reference>
+		<Reference Include="CommandDotNet.Helper">
+			<HintPath>..\..\commanddotnet-helper\CommandDotNet.Helper\bin\Debug\net6.0\CommandDotNet.Helper.dll</HintPath>
+		</Reference>
+		<Reference Include="CommandDotNet.IoC.Unity">
+			<HintPath>..\..\commanddotnet-helper\CommandDotNet.IoC.Unity\bin\Debug\net6.0\CommandDotNet.IoC.Unity.dll</HintPath>
+		</Reference>
+		<Reference Include="CommandDotNet.Unity.Helper">
+			<HintPath>..\..\commanddotnet-helper\CommandDotNet.Unity.Helper\bin\Debug\net6.0\CommandDotNet.Unity.Helper.dll</HintPath>
+		</Reference>
+		<Reference Include="Serilog.Wrapper">
+			<HintPath>..\..\serilog-wrapper\Serilog.Wrapper\bin\Debug\net6.0\Serilog.Wrapper.dll</HintPath>
+		</Reference>
+		<Reference Include="CRUDCommandHelper">
+			<HintPath>..\..\crud-command-helper\CRUDCommandHelper\bin\Debug\net6.0\CRUDCommandHelper.dll</HintPath>
+		</Reference>
+		<Reference Include="Log.Min.Data">
+			<HintPath>..\..\log-min-data\Log.Min.Data\bin\Debug\net6.0\Log.Min.Data.dll</HintPath>
+		</Reference>
+		<Reference Include="Log.Min.Table">
+			<HintPath>..\..\log-min-table\Log.Min.Table\bin\Debug\net6.0\Log.Min.Table.dll</HintPath>
+		</Reference>
+		<Reference Include="Log.Min.Lib">
+			<HintPath>..\..\log-min-lib\Log.Min.Lib\bin\Debug\net6.0\Log.Min.Lib.dll</HintPath>
+		</Reference>
+	</ItemGroup> -->
+	<!-- Release refs -->
+	<ItemGroup>
+		<Reference Include="EFCore.Helper">
+			<HintPath>..\..\..\Build\efcore-helper\EFCore.Helper\EFCore.Helper.dll</HintPath>
+		</Reference>
+		<Reference Include="DIHelper">
+			<HintPath>..\..\..\Build\di-helper\DIHelper\DIHelper.dll</HintPath>
+		</Reference>
+		<Reference Include="CLIHelper">
+			<HintPath>..\..\..\Build\cli-helper\CLIHelper\CLIHelper.dll</HintPath>
+		</Reference>
+		<Reference Include="Config.Wrapper">
+			<HintPath>..\..\..\Build\config-wrapper\Config.Wrapper\Config.Wrapper.dll</HintPath>
+		</Reference>
+		<Reference Include="ModelHelper">
+			<HintPath>..\..\..\Build\model-helper\ModelHelper\ModelHelper.dll</HintPath>
+		</Reference>
+		<Reference Include="DataToTable">
+			<HintPath>..\..\..\Build\datatotable\DataToTable\DataToTable.dll</HintPath>
+		</Reference>
+		<Reference Include="CommandDotNet.Helper">
+			<HintPath>..\..\..\Build\commanddotnet-helper\CommandDotNet.Helper\CommandDotNet.Helper.dll</HintPath>
+		</Reference>
+		<Reference Include="CommandDotNet.IoC.Unity">
+			<HintPath>..\..\..\Build\commanddotnet-helper\CommandDotNet.IoC.Unity\CommandDotNet.IoC.Unity.dll</HintPath>
+		</Reference>
+		<Reference Include="CommandDotNet.Unity.Helper">
+			<HintPath>..\..\..\Build\commanddotnet-helper\CommandDotNet.Unity.Helper\CommandDotNet.Unity.Helper.dll</HintPath>
+		</Reference>
+		<Reference Include="Serilog.Wrapper">
+			<HintPath>..\..\..\Build\serilog-wrapper\Serilog.Wrapper\Serilog.Wrapper.dll</HintPath>
+		</Reference>
+		<Reference Include="CRUDCommandHelper">
+			<HintPath>..\..\..\Build\crud-command-helper\CRUDCommandHelper\CRUDCommandHelper.dll</HintPath>
+		</Reference>
+		<Reference Include="Log.Min.Data">
+			<HintPath>..\..\..\Build\log-min-data\Log.Min.Data\Log.Min.Data.dll</HintPath>
+		</Reference>
+		<Reference Include="Log.Min.Table">
+			<HintPath>..\..\..\Build\log-min-table\Log.Min.Table\Log.Min.Table.dll</HintPath>
+		</Reference>
+		<Reference Include="Log.Min.Lib">
+			<HintPath>..\..\..\Build\log-min-lib\Log.Min.Lib\Log.Min.Lib.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+</Project>
