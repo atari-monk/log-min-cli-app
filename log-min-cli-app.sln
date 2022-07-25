@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log.Min.Cli.App", "Log.Min.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log.Min.Cli.App.TestApi", "Log.Min.Cli.App.TestApi\Log.Min.Cli.App.TestApi.csproj", "{67B67485-AD15-49D3-98A0-C2BD830BF409}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log.Min.Cli.App.Tests", "Log.Min.Cli.App.Tests\Log.Min.Cli.App.Tests.csproj", "{5025DEB0-2443-49FC-9676-3DF95AFEFECE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{67B67485-AD15-49D3-98A0-C2BD830BF409}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67B67485-AD15-49D3-98A0-C2BD830BF409}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67B67485-AD15-49D3-98A0-C2BD830BF409}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5025DEB0-2443-49FC-9676-3DF95AFEFECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5025DEB0-2443-49FC-9676-3DF95AFEFECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5025DEB0-2443-49FC-9676-3DF95AFEFECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5025DEB0-2443-49FC-9676-3DF95AFEFECE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

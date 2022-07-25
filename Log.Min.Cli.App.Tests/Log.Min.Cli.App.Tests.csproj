@@ -1,0 +1,83 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <IsPackable>false</IsPackable>
+        <IsPublishable>false</IsPublishable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+        <PackageReference Include="xunit" Version="2.4.1" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="coverlet.collector" Version="3.1.0">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="appsettings.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Log.Min.Cli.App\Log.Min.Cli.App.csproj" />
+      <ProjectReference Include="..\Log.Min.Cli.App.TestApi\Log.Min.Cli.App.TestApi.csproj" />
+    </ItemGroup>
+
+    <!-- Debug refs -->
+	<ItemGroup>
+        <Reference Include="XUnit.Helper">
+			<HintPath>..\..\xunit-helper\XUnit.Helper\bin\Debug\net6.0\XUnit.Helper.dll</HintPath>
+		</Reference>
+		<Reference Include="EFCore.Helper">
+			<HintPath>..\..\efcore-helper\EFCore.Helper\bin\Debug\net6.0\EFCore.Helper.dll</HintPath>
+		</Reference>
+		<Reference Include="DIHelper">
+			<HintPath>..\..\di-helper\DIHelper\bin\Debug\net6.0\DIHelper.dll</HintPath>
+		</Reference>
+		<Reference Include="CLIHelper">
+			<HintPath>..\..\cli-helper\CLIHelper\bin\Debug\net6.0\CLIHelper.dll</HintPath>
+		</Reference>
+		<Reference Include="Config.Wrapper">
+			<HintPath>..\..\config-wrapper\Config.Wrapper\bin\Debug\net6.0\Config.Wrapper.dll</HintPath>
+		</Reference>
+		<Reference Include="ModelHelper">
+			<HintPath>..\..\model-helper\ModelHelper\bin\Debug\net6.0\ModelHelper.dll</HintPath>
+		</Reference>
+		<Reference Include="DataToTable">
+			<HintPath>..\..\datatotable\DataToTable\bin\Debug\net6.0\DataToTable.dll</HintPath>
+		</Reference>
+		<Reference Include="CommandDotNet.Helper">
+			<HintPath>..\..\commanddotnet-helper\CommandDotNet.Helper\bin\Debug\net6.0\CommandDotNet.Helper.dll</HintPath>
+		</Reference>
+		<Reference Include="CommandDotNet.IoC.Unity">
+			<HintPath>..\..\commanddotnet-helper\CommandDotNet.IoC.Unity\bin\Debug\net6.0\CommandDotNet.IoC.Unity.dll</HintPath>
+		</Reference>
+		<Reference Include="CommandDotNet.Unity.Helper">
+			<HintPath>..\..\commanddotnet-helper\CommandDotNet.Unity.Helper\bin\Debug\net6.0\CommandDotNet.Unity.Helper.dll</HintPath>
+		</Reference>
+		<Reference Include="Serilog.Wrapper">
+			<HintPath>..\..\serilog-wrapper\Serilog.Wrapper\bin\Debug\net6.0\Serilog.Wrapper.dll</HintPath>
+		</Reference>
+		<Reference Include="CRUDCommandHelper">
+			<HintPath>..\..\crud-command-helper\CRUDCommandHelper\bin\Debug\net6.0\CRUDCommandHelper.dll</HintPath>
+		</Reference>
+		<Reference Include="Log.Min.Data">
+			<HintPath>..\..\log-min-data\Log.Min.Data\bin\Debug\net6.0\Log.Min.Data.dll</HintPath>
+		</Reference>
+		<Reference Include="Log.Min.Table">
+			<HintPath>..\..\log-min-table\Log.Min.Table\bin\Debug\net6.0\Log.Min.Table.dll</HintPath>
+		</Reference>
+        <Reference Include="Log.Min.Lib">
+            <HintPath>..\..\log-min-lib\Log.Min.Lib\bin\Debug\net6.0\Log.Min.Lib.dll</HintPath>
+        </Reference>
+	</ItemGroup>
+</Project>
