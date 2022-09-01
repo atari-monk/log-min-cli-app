@@ -17,8 +17,8 @@ public class LogBootstraper
     {
         var unity = new UnityContainer()
             .AddExtension(new Diagnostic());
-        var serviceSuite = new ServiceSuite(unity);
-        serviceSuite.Register();
+        var configSuite = new ConfigSuite(unity);
+        configSuite.Register();
         suite = new SuiteConfig(
             unity.Resolve<IConfigReader>())
                 .GetSuite(unity);
